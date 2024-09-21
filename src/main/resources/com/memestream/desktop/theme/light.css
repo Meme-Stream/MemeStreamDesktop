@@ -1,0 +1,47 @@
+* {
+    -fx-accent: #0082d4;
+    -bg-color: #f7f9fc;
+    -gray-color: #dedede;
+}
+
+.root {
+    -fx-background-color: -bg-color;
+}
+
+.pagination .pagination-control .control-box {
+    -fx-spacing: 0px;
+}
+
+.pagination .pagination-control .control-box .number-button {
+    -fx-background-color: -bg-color;
+    -fx-background-insets: 0px;
+    -fx-border-width: 1px;
+    -fx-border-color: -gray-color;
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-font-size: 14px;
+}
+
+.pagination .pagination-control .control-box .number-button:selected {
+    -fx-background-color: -fx-accent;
+    -fx-text-fill: white;
+}
+
+.pagination .pagination-control .control-box .number-button:hover {
+    -fx-background-color: -gray-color;
+    -fx-text-fill: black;
+}
+
+.pagination .pagination-control .control-box .left-arrow-button,
+.pagination .pagination-control .control-box .right-arrow-button {
+    -fx-background-color: -bg-color;
+    -fx-background-insets: 0px;
+    -fx-border-width: 1px;
+    -fx-border-color: -gray-color;
+    -fx-min-height: 30px;
+    -fx-ming-width: 30px;
+}
+
+.pagination .pagination-control .page-information {
+    -fx-font-size: 14px;
+}

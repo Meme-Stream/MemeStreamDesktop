@@ -1,0 +1,54 @@
+* {
+    -fx-accent: #0082d4;
+    -bg-color: #1a1a1a;
+    -gray-color: #262626;
+}
+
+.root {
+    -fx-background-color: -bg-color;
+}
+
+.pagination .pagination-control .control-box {
+    -fx-spacing: 0px;
+}
+
+.pagination .pagination-control .control-box .number-button {
+    -fx-background-color: -bg-color;
+    -fx-background-insets: 0px;
+    -fx-border-width: 1px;
+    -fx-border-color: -gray-color;
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
+
+.pagination .pagination-control .control-box .number-button:selected {
+    -fx-background-color: -fx-accent;
+    -fx-text-fill: white;
+}
+
+.pagination .pagination-control .control-box .number-button:hover {
+    -fx-background-color: -gray-color;
+    -fx-text-fill: white;
+}
+
+.pagination .pagination-control .control-box .left-arrow-button,
+.pagination .pagination-control .control-box .right-arrow-button {
+    -fx-background-color: -bg-color;
+    -fx-background-insets: 0px;
+    -fx-border-width: 1px;
+    -fx-border-color: -gray-color;
+    -fx-min-height: 30px;
+    -fx-ming-width: 30px;
+}
+
+.pagination .pagination-control .control-box .right-arrow-button .right-arrow,
+.pagination .pagination-control .control-box .left-arrow-button .left-arrow {
+    -fx-background-color: white;
+}
+
+.pagination .pagination-control .page-information {
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
