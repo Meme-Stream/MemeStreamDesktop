@@ -7,7 +7,8 @@ plugins {
 }
 
 group 'com.memestream'
-version '1.0-SNAPSHOT'
+version '1.0.0'
+description 'A meme sharing platform'
 
 repositories {
     mavenCentral()
@@ -52,8 +53,45 @@ jlink {
     imageZip = project.file("${layout.buildDirectory.get().toString()}/distributions/app-${javafx.platform.classifier}.zip")
     options = ['--strip-debug', '--compress', 'zip-6', '--no-header-files', '--no-man-pages']
     launcher {
-        name = 'app'
+        name = 'MemeStream'
     }
+
+    jpackage {
+        installerOptions = [
+                '--description', description,
+                '--copyright', 'Copyright 2024',
+                '--app-version', version,
+                '--vendor', 'Meme Stream'
+        ] as List<String>
+
+        //Detect OS
+        def os= org.gradle.internal.os.OperatingSystem.current()
+
+        //Windows
+        if (os.isWindows()){
+            imageOptions += ['--icon', 'src/main/resources/com/memestream/desktop/icon/icon128x128.ico']
+            installerOptions += [
+                    '--win-per-user-install', '--win-dir-chooser',
+                    '--win-menu', '--win-shortcut'
+            ]
+        }
+
+        //MacOsX
+        if (os.isMacOsX()){
+            imageOptions += ['--icon', 'src/main/resources/mac__icon.icns']
+        }
+
+        //Linux
+        if (os.isLinux()){
+            imageOptions += ['--icon', 'src/main/resources/com/memestream/desktop/icon/icon128x128.png']
+            installerOptions += [
+                    '--linux-menu-group', 'Entertainment',
+                    '--linux-shortcut',
+                    '--linux-deb-maintainer', 'email@.com'
+            ]
+        }
+    }
+
 }
 
 jlinkZip {
