@@ -14,13 +14,16 @@
 
 .pagination .pagination-control .control-box .number-button {
     -fx-background-color: -bg-color;
+    -fx-border-color: -gray-color;
+    -fx-text-fill: white;
+
     -fx-background-insets: 0px;
     -fx-border-width: 1px;
-    -fx-border-color: -gray-color;
+
     -fx-min-width: 30px;
     -fx-min-height: 30px;
+
     -fx-font-size: 14px;
-    -fx-text-fill: white;
 }
 
 .pagination .pagination-control .control-box .number-button:selected {
@@ -33,12 +36,28 @@
     -fx-text-fill: white;
 }
 
-.pagination .pagination-control .control-box .left-arrow-button,
+.pagination .pagination-control .control-box .left-arrow-button {
+    -fx-background-color: -bg-color;
+    -fx-border-color: -gray-color;
+
+    -fx-background-insets: 0px;
+    -fx-background-radius: 5px 0px 0px 5px;
+    -fx-border-radius: 5px 0px 0px 5px;
+    -fx-border-width: 1px;
+
+    -fx-min-height: 30px;
+    -fx-ming-width: 30px;
+}
+
 .pagination .pagination-control .control-box .right-arrow-button {
     -fx-background-color: -bg-color;
-    -fx-background-insets: 0px;
-    -fx-border-width: 1px;
     -fx-border-color: -gray-color;
+
+    -fx-background-insets: 0px;
+    -fx-background-radius: 0px 5px 5px 0px;
+    -fx-border-radius: 0px 5px 5px 0px;
+    -fx-border-width: 1px;
+
     -fx-min-height: 30px;
     -fx-ming-width: 30px;
 }
@@ -51,4 +70,34 @@
 .pagination .pagination-control .page-information {
     -fx-font-size: 14px;
     -fx-text-fill: white;
+}
+
+.list-view {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-color: -bg-color;
+}
+
+.list-cell {
+    -fx-background-color: transparent;
+
+   -fx-padding: 4px;
+   -fx-border-insets: 4px;
+   -fx-background-insets: 4px;
+
+   -fx-background-radius: 5px;
+   -fx-border-radius: 5px;
+}
+
+.list-cell:filled {
+   -fx-border-color: -gray-color;
+}
+
+.list-cell Text {
+    -fx-fill: white;
+}
+
+.list-cell:filled:selected:focused,
+.list-cell:filled:selected {
+    -fx-background-color: -fx-accent;
 }

@@ -14,7 +14,7 @@ public class App extends Application {
     public void start(Stage stage) throws Exception {
         final var loader = new FXMLLoader(Objects.requireNonNull(getClass().getResource("main-view.fxml")));
         final var scene = new Scene(loader.load(), 800, 600);
-        ThemeManager.setTheme(scene, Theme.LIGHT);
+        ThemeManager.setTheme(scene, Theme.DARK);
         stage.setScene(scene);
         stage.setTitle("MemeStream");
         stage.show();

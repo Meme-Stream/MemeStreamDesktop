@@ -1,5 +1,6 @@
 package com.memestream.desktop.controller;
 
+import com.memestream.desktop.ui.CustomPageFactory;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Pagination;
@@ -18,6 +19,7 @@ public class MainController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        final var pageFactory = new CustomPageFactory();
+        pagination.setPageFactory(pageFactory);
     }
 }
