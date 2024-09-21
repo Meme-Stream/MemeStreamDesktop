@@ -85,13 +85,3 @@
 .list-cell:filled {
    -fx-border-color: -gray-color;
 }
-
-.list-cell:filled:selected:focused,
-.list-cell:filled:selected {
-    -fx-background-color: -fx-accent;
-}
-
-.list-cell:filled:selected:focused Text,
-.list-cell:filled:selected Text {
-    -fx-fill: white;
-}
